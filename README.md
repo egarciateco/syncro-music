@@ -120,17 +120,15 @@ syncro-music/
 
 ---
 
-## 🎬 Videos de la App
+## 🎬 Videos de la App (Nuevos enlaces de Google Drive)
 
 ### Video de Presentación (Splash Screen)
-**URL:** `https://res.cloudinary.com/dkdvhes2i/video/upload/v1775151583/Video_para_Syncro_slfqma.mp4`
-
-Se reproduce automáticamente durante 3 segundos al abrir la app.
+**URL Directa:** `https://drive.google.com/uc?export=download&id=1nngVSYefHbkLfdAz8SZ8rq1QNP2-5CAL`
 
 ### Video para Radios/Podcasts
-**URL:** `https://res.cloudinary.com/dkdvhes2i/video/upload/v1775151584/Microfono_nw64oe.mp4`
+**URL Directa:** `https://drive.google.com/uc?export=download&id=16enx0IMGzkuYZpDLH-nnb6WFhoUkkoRS`
 
-Para agregar más videos, súbelos a Cloudinary y usa la URL directa en el código.
+Para usar estos videos en `expo-av`, se usa el formato `uc?export=download` para forzar la descarga directa del archivo.
 
 ---
 

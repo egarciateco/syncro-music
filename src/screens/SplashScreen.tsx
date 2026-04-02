@@ -20,7 +20,7 @@ const { width, height } = Dimensions.get('window');
 //  O usa Cloudinary:
 //     https://res.cloudinary.com/TU_CUENTA/video/upload/splash_video.mp4
 // ======================================================
-const SPLASH_VIDEO_URL = 'https://res.cloudinary.com/dkdvhes2i/video/upload/v1775151583/Video_para_Syncro_slfqma.mp4';
+const SPLASH_VIDEO_URL = 'https://drive.google.com/uc?export=download&id=1nngVSYefHbkLfdAz8SZ8rq1QNP2-5CAL';
 
 type Props = { navigation: any };
 

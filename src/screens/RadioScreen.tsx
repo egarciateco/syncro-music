@@ -16,7 +16,7 @@ import {
 } from '../services/radioService';
 
 // Video para la pantalla de Podcast/Radio (Cloudinary)
-const RADIO_VIDEO_URL = 'https://res.cloudinary.com/dkdvhes2i/video/upload/v1775151584/Microfono_nw64oe.mp4';
+const RADIO_VIDEO_URL = 'https://drive.google.com/uc?export=download&id=16enx0IMGzkuYZpDLH-nnb6WFhoUkkoRS';
 
 type Tab = 'argentina' | 'foreign' | 'search';
 type Props = { navigation: any };
