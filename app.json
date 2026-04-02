@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "Syncro Music",
+    "slug": "syncro-music",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A1F"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.syncromusic.app",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Para grabar videos musicales",
+        "NSCameraUsageDescription": "Para grabar videos musicales tipo TikTok",
+        "NSPhotoLibraryUsageDescription": "Para guardar música en tu dispositivo",
+        "NSPhotoLibraryAddUsageDescription": "Para guardar música en tu dispositivo"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A0A1F"
+      },
+      "package": "com.syncromusic.app",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECORD_AUDIO",
+        "CAMERA",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "BLUETOOTH",
+        "BLUETOOTH_ADMIN"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-av",
+      "expo-media-library",
+      [
+        "expo-font",
+        {
+          "fonts": []
+        }
+      ]
+    ],
+    "extra": {
+      "jamendoClientId": "b6747d04",
+      "mercadoPagoPreferenceId": "2993211976-7e998a4f-4658-41bb-94d0-4340e2d43561"
+    }
+  }
+}
