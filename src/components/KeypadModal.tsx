@@ -36,8 +36,8 @@ export default function KeypadModal({ visible, onClose, onSuccess }: Props) {
       const note = BELL_NOTES[parseInt(digit)] || BELL_NOTES[0];
       // Usamos un sonido de tick system si no hay sonido custom
       const { sound: s } = await Audio.Sound.createAsync(
-        { uri: `https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg` },
-        { shouldPlay: true, volume: 0.6 }
+        { uri: `https://actions.google.com/sounds/v1/alarms/desk_bell.ogg` },
+        { shouldPlay: true, volume: 0.8 }
       );
       setSound(s);
       setTimeout(() => s.unloadAsync(), 500);

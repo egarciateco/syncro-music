@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { getIsPremium, setIsPremium } from '../services/storageService';
+import { syncPremiumStatus } from '../services/supabase';
 
 type UserState = {
   isPremium: boolean;
@@ -14,7 +15,7 @@ type UserState = {
   setHasSeenSplash: (value: boolean) => void;
 };
 
-export const useUserStore = create<UserState>((set) => ({
+export const useUserStore = create<UserState>()((set) => ({
   isPremium: false,
   isAdmin: false,
   isLoggedIn: false,
@@ -27,6 +28,7 @@ export const useUserStore = create<UserState>((set) => ({
 
   activatePremium: async () => {
     await setIsPremium(true);
+    await syncPremiumStatus(true);
     set({ isPremium: true });
   },
 

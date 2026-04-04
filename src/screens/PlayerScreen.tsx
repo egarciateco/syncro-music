@@ -4,6 +4,7 @@ import {
   Dimensions, Image, Animated
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Video, ResizeMode } from 'expo-av';
 import { Ionicons } from '@expo/vector-icons';
 import { COLORS } from '../constants/colors';
 import AppHeader from '../components/AppHeader';
@@ -51,13 +52,24 @@ export default function PlayerScreen({ navigation }: Props) {
       <AppHeader title="Reproductor" onBack={() => navigation.goBack()} />
 
       <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
-        {/* Portada grande */}
+        {/* Portada grande o Video */}
         <LinearGradient colors={['#2D1B69', '#0A0A1F']} style={styles.coverSection}>
           <View style={styles.coverShadow}>
-            <Image
-              source={{ uri: currentTrack.image || 'https://via.placeholder.com/300' }}
-              style={styles.coverLarge}
-            />
+            {isPlaying ? (
+              <Video
+                source={{ uri: 'https://cdn.pixabay.com/video/2018/06/25/16892-276941214_tiny.mp4' }}
+                style={styles.coverLarge}
+                resizeMode={ResizeMode.COVER}
+                shouldPlay
+                isLooping
+                isMuted
+              />
+            ) : (
+              <Image
+                source={{ uri: currentTrack.image || 'https://via.placeholder.com/300' }}
+                style={styles.coverLarge}
+              />
+            )}
           </View>
           {/* Waves animadas */}
           <View style={styles.wavesRow}>
